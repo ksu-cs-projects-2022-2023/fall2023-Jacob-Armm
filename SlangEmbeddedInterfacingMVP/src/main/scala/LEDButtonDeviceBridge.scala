@@ -5,11 +5,11 @@ import FirmataUtil._
 
 case class DemoBoardPinOut(pwmPin: Z, buttonPin: Z, redPin: Z, greenPin: Z, bluePin: Z)
 
-object DemoDeviceBridge {
-  //val MEGA2560 = BoardPinOut(9, 13, 54) // https://www.electronicshub.org/arduino-mega-pinout/
+object LEDButtonDeviceBridge {
+  val MEGA2560 = DemoBoardPinOut(9, 2, 13, 12, 11) // https://www.electronicshub.org/arduino-mega-pinout/
   val UNO = DemoBoardPinOut(9, 2, 13, 12, 11)
 
-  val board = UNO
+  val board = MEGA2560
   val port: String = "/dev/ttyACM0"
 
   def init(): Unit = {
