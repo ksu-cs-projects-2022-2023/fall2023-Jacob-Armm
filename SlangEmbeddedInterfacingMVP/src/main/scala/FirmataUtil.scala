@@ -1,5 +1,5 @@
 // #Sireum
-package bc.BuildingControl.device
+package scala
 
 import org.sireum._
 
@@ -10,5 +10,10 @@ object FirmataUtil {
     "ANALOG" // Analog pin in analog input mode
     "PWM" // Digital pin in PWM output mode
     "SERVO"
+  }
+
+  @enum object LEDMode {
+    "On"
+    "Off"
   }
 }

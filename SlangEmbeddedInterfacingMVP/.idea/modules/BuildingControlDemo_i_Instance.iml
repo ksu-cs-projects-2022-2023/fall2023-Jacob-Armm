@@ -3,13 +3,8 @@
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../src">
-      <sourceFolder url="file://$MODULE_DIR$/../../src/main/art" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/../../src/main/architecture" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/../../src/main/bridge" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/../../src/main/component" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/../../src/main/data" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/../../src/test/bridge" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/../../src/test/util" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../src/main/scala" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../src/test/scala" isTestSource="true" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="org.sireum.kekinian.library_2.13" level="project" />

@@ -1,8 +1,7 @@
-package bc
+package scala
 
-import bc.BuildingControl.FanCmd
-import bc.BuildingControl.device.{Board, DemoDeviceBridge}
 import org.sireum._
+import FirmataUtil._
 
 object DemoStateMachine extends App {
   def main(args: ISZ[String]): Z = {
@@ -22,21 +21,21 @@ object DemoStateMachine extends App {
         }
 
         if (buttonState == 0) {
-          DemoDeviceBridge.setRed(FanCmd.On)
-          DemoDeviceBridge.setBlue(FanCmd.Off)
-          DemoDeviceBridge.setGreen(FanCmd.Off)
+          DemoDeviceBridge.setRed(LEDMode.On)
+          DemoDeviceBridge.setBlue(LEDMode.Off)
+          DemoDeviceBridge.setGreen(LEDMode.Off)
         }
 
         if (buttonState == 1) {
-          DemoDeviceBridge.setRed(FanCmd.Off)
-          DemoDeviceBridge.setBlue(FanCmd.Off)
-          DemoDeviceBridge.setGreen(FanCmd.On)
+          DemoDeviceBridge.setRed(LEDMode.Off)
+          DemoDeviceBridge.setBlue(LEDMode.Off)
+          DemoDeviceBridge.setGreen(LEDMode.On)
         }
 
         if (buttonState == 2) {
-          DemoDeviceBridge.setRed(FanCmd.Off)
-          DemoDeviceBridge.setBlue(FanCmd.On)
-          DemoDeviceBridge.setGreen(FanCmd.Off)
+          DemoDeviceBridge.setRed(LEDMode.Off)
+          DemoDeviceBridge.setBlue(LEDMode.On)
+          DemoDeviceBridge.setGreen(LEDMode.Off)
         }
       }
     }

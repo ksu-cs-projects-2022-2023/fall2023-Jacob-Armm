@@ -66,9 +66,9 @@ val slangModule: Module = Module(
     //"io.github.java-native:jssc:",
     //"com.github.kurbatov:firmata4j:"
 ),
-  sources = for(m <- ISZ("art", "architecture", "bridge", "component", "data", "nix", "seL4Nix")) yield (Os.path("main") / m).string,
+  sources = for(m <- ISZ("scala")) yield (Os.path("main") / m).string,
   resources = ISZ(),
-  testSources = for (m <- ISZ("bridge", "util")) yield (Os.path("test") / m).string,
+  testSources = for (m <- ISZ("scala")) yield (Os.path("test") / m).string,
   testResources = ISZ(),
   publishInfoOpt = None()
 )

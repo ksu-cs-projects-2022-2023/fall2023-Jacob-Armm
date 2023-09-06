@@ -1,6 +1,6 @@
-package bc.BuildingControl.device
+package scala
 
-import bc.BuildingControl.device.FirmataUtil.PinMode
+import FirmataUtil._
 import org.firmata4j._
 import org.firmata4j.firmata._
 import org.sireum._

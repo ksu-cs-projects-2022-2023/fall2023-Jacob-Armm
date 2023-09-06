@@ -4,7 +4,7 @@
       <env name="JAVA_HOME" value="/home/j/jdlegg/Desktop/Sireum/bin/linux/java" />
     </envs>
     <option name="MAIN_CLASS_NAME" value="org.sireum.Sireum" />
-    <module name="slang" />
+    <module name="SlangEmbeddedInterfacingMVP" />
     <option name="PROGRAM_PARAMETERS" value="slang run $FilePath$" />
     <method v="2" />
   </configuration>
