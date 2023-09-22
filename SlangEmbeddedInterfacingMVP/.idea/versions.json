@@ -12,7 +12,7 @@
     ],
     [
       "org.sireum.version.zulu",
-      "20.32.11-ca-fx-jdk20.0.2"
+      "21.28.85-ca-fx-jdk21.0.0"
     ],
     [
       "org.scala-lang.modules::scala-parallel-collections:",
@@ -32,7 +32,7 @@
     ],
     [
       "org.sireum.version.plugin.sireum-intellij-plugin",
-      "true,false,false,4.20230818.3413cfd"
+      "true,false,false,4.20230922.3133b63"
     ],
     [
       "org.sireum.version.plugin.sireum-intellij-injector",
@@ -68,7 +68,7 @@
     ],
     [
       "org.sireum.version.idea",
-      "2023.2.1"
+      "2023.2.2"
     ],
     [
       "org.sireum.version.plugin.ksu-cis-706-jdt-astview",
@@ -120,11 +120,11 @@
     ],
     [
       "org.sireum.version.plugin.rust",
-      "true,true,false,373256"
+      "false,true,false,397545"
     ],
     [
       "org.scala-js::scalajs-dom::",
-      "2.6.0"
+      "2.7.0"
     ],
     [
       "org.sireum:presentasi-jfx:",
@@ -136,7 +136,7 @@
     ],
     [
       "org.sireum.version.plugin.native-debug",
-      "false,false,false,378800"
+      "false,false,false,390470"
     ],
     [
       "org.apache.commons:commons-compress:",

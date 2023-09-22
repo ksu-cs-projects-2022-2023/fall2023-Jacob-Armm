@@ -1,7 +1,8 @@
 // #Sireum
+package board
 
 import org.sireum._
-import FirmataUtil._
+import utils.FirmataUtil.PinMode
 
 @ext object Board {
 

@@ -1,4 +1,5 @@
 // #Sireum
+package utils
 
 import org.sireum._
 
@@ -11,7 +12,7 @@ object FirmataUtil {
     "SERVO"
   }
 
-  @enum object LEDMode {
+  @enum object DigitalState {
     "On"
     "Off"
   }

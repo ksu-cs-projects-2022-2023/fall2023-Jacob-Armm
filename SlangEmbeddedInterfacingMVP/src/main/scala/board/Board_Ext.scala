@@ -1,7 +1,9 @@
-import FirmataUtil._
+package board
+
 import org.firmata4j._
 import org.firmata4j.firmata._
 import org.sireum._
+import utils.FirmataUtil.PinMode
 object Board_Ext {
   var port: String = _
   var device: IODevice = _
@@ -38,7 +40,8 @@ object Board_Ext {
 
   def analogRead(pin: String, mode: PinMode.Type): Z = {
     // for now just let exception halt the program
-    val p = device.getPin(pinMap(pin.native))
+    val mappedPin = pinMap(pin.native)
+    val p = device.getPin(mappedPin)
     p.setMode(Pin.Mode.valueOf(mode.name.native))
     return Z(p.getValue)
   }
