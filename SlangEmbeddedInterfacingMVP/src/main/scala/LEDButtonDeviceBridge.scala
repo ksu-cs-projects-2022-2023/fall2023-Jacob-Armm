@@ -1,59 +1,47 @@
-package scala
+// #Sireum
 
 import org.sireum._
 import FirmataUtil._
 
-case class DemoBoardPinOut(pwmPin: Z, buttonPin: Z, redPin: Z, greenPin: Z, bluePin: Z)
-
 object LEDButtonDeviceBridge {
-  val MEGA2560 = DemoBoardPinOut(9, 2, 13, 12, 11) // https://www.electronicshub.org/arduino-mega-pinout/
-  val UNO = DemoBoardPinOut(9, 2, 13, 12, 11)
 
-  val board = MEGA2560
-  val port: String = "/dev/ttyACM0"
-
-  def init(): Unit = {
+  def init(port: String): Unit = {
     Board.init(port)
   }
 
-  def ready: B = {
-    init()
+  def ready(): B = {
     return Board.ready
   }
 
   def getButton: B = {
-    init()
-    val out = Board.analogRead(board.buttonPin, PinMode.INPUT)
+    val out = Board.analogRead("Button", PinMode.INPUT)
     return out == 1
   }
 
   def setRed(cmd: LEDMode.Type): Unit = {
-    init()
     cmd match {
       case LEDMode.On =>
-        Board.analogWrite(board.redPin, PinMode.OUTPUT, 255)
+        Board.analogWrite("RedLed", PinMode.OUTPUT, 255)
       case LEDMode.Off =>
-        Board.analogWrite(board.redPin, PinMode.OUTPUT, 0)
+        Board.analogWrite("RedLed", PinMode.OUTPUT, 0)
     }
   }
 
   def setGreen(cmd: LEDMode.Type): Unit = {
-    init()
     cmd match {
       case LEDMode.On =>
-        Board.analogWrite(board.greenPin, PinMode.OUTPUT, 255)
+        Board.analogWrite("GreenLed", PinMode.OUTPUT, 255)
       case LEDMode.Off =>
-        Board.analogWrite(board.greenPin, PinMode.OUTPUT, 0)
+        Board.analogWrite("GreenLed", PinMode.OUTPUT, 0)
     }
   }
 
   def setBlue(cmd: LEDMode.Type): Unit = {
-    init()
     cmd match {
       case LEDMode.On =>
-        Board.analogWrite(board.bluePin, PinMode.OUTPUT, 255)
+        Board.analogWrite("BluePin", PinMode.OUTPUT, 255)
       case LEDMode.Off =>
-        Board.analogWrite(board.bluePin, PinMode.OUTPUT, 0)
+        Board.analogWrite("BluePin", PinMode.OUTPUT, 0)
     }
   }
 }

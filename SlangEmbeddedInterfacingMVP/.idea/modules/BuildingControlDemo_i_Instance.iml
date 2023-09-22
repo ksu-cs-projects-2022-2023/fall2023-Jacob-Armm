@@ -3,12 +3,12 @@
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../src">
-      <sourceFolder url="file://$MODULE_DIR$/../../src/main/scala" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/../../src/test/scala" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../src\main\scala" isTestSource="false" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="org.sireum.kekinian.library_2.13" level="project" />
     <orderEntry type="library" exported="" name="com.github.kurbatov.firmata4j" level="project" />
+    <orderEntry type="library" exported="" name="io.github.java-native.jssc" level="project" />
     <orderEntry type="library" exported="" name="org.sireum.kekinian.library-shared_2.13" level="project" />
     <orderEntry type="library" exported="" name="com.zaxxer.nuprocess" level="project" />
     <orderEntry type="library" exported="" name="com.lihaoyi.os-lib_2.13" level="project" />
@@ -36,6 +36,7 @@
     <orderEntry type="library" exported="" name="org.fusesource.jansi.jansi" level="project" />
     <orderEntry type="library" exported="" name="org.scream3r.jssc" level="project" />
     <orderEntry type="library" exported="" name="org.slf4j.slf4j-api" level="project" />
+    <orderEntry type="library" exported="" name="org.scijava.native-lib-loader" level="project" />
     <orderEntry type="library" exported="" name="org.sireum.kekinian.test_2.13" level="project" />
     <orderEntry type="library" exported="" name="org.scala-lang.modules.scala-xml_2.13" level="project" />
     <orderEntry type="library" exported="" name="org.sireum.kekinian.macros_2.13" level="project" />
@@ -57,23 +58,6 @@
     <orderEntry type="library" exported="" name="org.scalactic.scalactic_2.13" level="project" />
     <orderEntry type="library" exported="" name="org.scala-lang.modules.scala-parallel-collections_2.13" level="project" />
     <orderEntry type="library" exported="" name="org.scala-lang.modules.scala-java8-compat_2.13" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="org.scalatest.scalatest_2.13" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="org.scalatest.scalatest-core_2.13" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="org.scalatest.scalatest-featurespec_2.13" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="org.scalatest.scalatest-flatspec_2.13" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="org.scalatest.scalatest-freespec_2.13" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="org.scalatest.scalatest-funsuite_2.13" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="org.scalatest.scalatest-funspec_2.13" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="org.scalatest.scalatest-propspec_2.13" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="org.scalatest.scalatest-refspec_2.13" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="org.scalatest.scalatest-wordspec_2.13" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="org.scalatest.scalatest-diagrams_2.13" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="org.scalatest.scalatest-matchers-core_2.13" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="org.scalatest.scalatest-shouldmatchers_2.13" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="org.scalatest.scalatest-mustmatchers_2.13" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="org.scalatest.scalatest-compatible" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="org.scalactic.scalactic_2.13" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="org.scala-lang.modules.scala-xml_2.13" level="project" />
     <orderEntry type="library" name="Scala" level="project" />
     <orderEntry type="inheritedJdk" />
   </component>

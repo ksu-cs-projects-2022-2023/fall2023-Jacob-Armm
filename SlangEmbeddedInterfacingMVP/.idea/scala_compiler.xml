@@ -17,7 +17,7 @@
       <parameter value="-language:postfixOps" />
     </parameters>
     <plugins>
-      <plugin path="/home/j/jdlegg/Desktop/Sireum/lib/scalac-plugin-4.20220817.dcaa6ea.jar" />
+      <plugin path="C:\kekinian\lib\scalac-plugin-4.20220817.dcaa6ea.jar" />
     </plugins>
   </component>
 </project>

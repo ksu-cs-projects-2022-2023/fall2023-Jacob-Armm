@@ -1,7 +1,7 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="Slang Script Runner" type="Application" factoryName="Application" singleton="false">
     <envs>
-      <env name="JAVA_HOME" value="/home/j/jdlegg/Desktop/Sireum/bin/linux/java" />
+      <env name="JAVA_HOME" value="C:\kekinian\bin\win\java" />
     </envs>
     <option name="MAIN_CLASS_NAME" value="org.sireum.Sireum" />
     <module name="SlangEmbeddedInterfacingMVP" />

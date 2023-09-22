@@ -1,5 +1,4 @@
 // #Sireum
-package scala
 
 import org.sireum._
 

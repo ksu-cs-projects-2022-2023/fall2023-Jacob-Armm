@@ -63,8 +63,8 @@ val slangModule: Module = Module(
   ivyDeps = ISZ("org.sireum.kekinian::library:",
     "com.github.kurbatov:firmata4j:",
     // uncomment the following two if on Windows or Apple Silicon
-    //"io.github.java-native:jssc:",
-    //"com.github.kurbatov:firmata4j:"
+    "io.github.java-native:jssc:",
+    "com.github.kurbatov:firmata4j:"
 ),
   sources = for(m <- ISZ("scala")) yield (Os.path("main") / m).string,
   resources = ISZ(),

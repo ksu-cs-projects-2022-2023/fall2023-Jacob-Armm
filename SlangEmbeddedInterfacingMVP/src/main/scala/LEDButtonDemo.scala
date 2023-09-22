@@ -1,23 +1,25 @@
-package scala
+// #Sireum
 
 import org.sireum._
 import FirmataUtil._
 
 object LEDButtonDemo extends App {
   def main(args: ISZ[String]): Z = {
-    LEDButtonDeviceBridge.ready
-    if(Board.ready){
+    LEDButtonDeviceBridge.init("COM5")
 
+    if(LEDButtonDeviceBridge.ready()){
       var buttonState: Z = 0
 
       while(true) {
 
         if(LEDButtonDeviceBridge.getButton) {
           while (LEDButtonDeviceBridge.getButton) { }
-          if (buttonState < 2)
-            buttonState += 1
-          else
+          if (buttonState < 2) {
+            buttonState = buttonState + 1
+          }
+          else {
             buttonState = 0
+          }
         }
 
         if (buttonState == 0) {

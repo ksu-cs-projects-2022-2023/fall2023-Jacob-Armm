@@ -9,7 +9,7 @@
         {
           "type" : "Module",
           "id" : "BuildingControlDemo_i_Instance",
-          "basePath" : "\/home\/j\/jdlegg\/Desktop\/fall2023-Jacob-Armm\/SlangEmbeddedInterfacingMVP\/src",
+          "basePath" : "C:\\Users\\Jacob\\Desktop\\fall2023-Jacob-Armm\\SlangEmbeddedInterfacingMVP\\src",
           "subPathOpt" : {
             "type" : "None"
           },
@@ -20,10 +20,10 @@
               "value" : "Jvm"
             }
           ],
-          "ivyDeps" : ["org.sireum.kekinian::library:", "com.github.kurbatov:firmata4j:"],
-          "sources" : ["main\/scala"],
+          "ivyDeps" : ["org.sireum.kekinian::library:", "com.github.kurbatov:firmata4j:", "io.github.java-native:jssc:", "com.github.kurbatov:firmata4j:"],
+          "sources" : ["main\\scala"],
           "resources" : [],
-          "testSources" : ["test\/scala"],
+          "testSources" : ["test\\scala"],
           "testResources" : [],
           "publishInfoOpt" : {
             "type" : "None"
