@@ -31,21 +31,21 @@ object LEDButtonDemo extends App {
         }
 
         if (buttonState == 0) {
-          redLED.setStateDigital(DigitalState.On)
-          blueLED.setStateDigital(DigitalState.Off)
-          greenLED.setStateDigital(DigitalState.Off)
+          redLED.on()
+          blueLED.off()
+          greenLED.off()
         }
 
         if (buttonState == 1) {
-          redLED.setStateDigital(DigitalState.Off)
-          blueLED.setStateDigital(DigitalState.Off)
-          greenLED.setStateDigital(DigitalState.On)
+          redLED.off()
+          blueLED.off()
+          greenLED.on()
         }
 
         if (buttonState == 2) {
-          redLED.setStateDigital(DigitalState.Off)
-          blueLED.setStateDigital(DigitalState.On)
-          greenLED.setStateDigital(DigitalState.Off )
+          redLED.off()
+          blueLED.on()
+          greenLED.off()
         }
       }
     }

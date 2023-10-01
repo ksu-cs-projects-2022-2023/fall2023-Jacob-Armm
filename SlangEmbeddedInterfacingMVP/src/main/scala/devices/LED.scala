@@ -3,20 +3,15 @@ package devices
 
 import org.sireum._
 import board.Board
-import utils.FirmataUtil.{DigitalState, PinMode}
+import utils.FirmataUtil.PinMode
 
-@datatype class LED(pin: String) {
-  def setStateDigital(cmd: DigitalState.Type): Unit = {
-    cmd match {
-      case DigitalState.On =>
-        Board.analogWrite(pin, PinMode.OUTPUT, 255)
-      case DigitalState.Off =>
-        Board.analogWrite(pin, PinMode.OUTPUT, 0)
-    }
+@record class LED(pin: String) {
+
+  def on(): Unit = {
+    Board.write(pin, PinMode.OUTPUT, 1)
   }
 
-  def setStatePWM(freq: Z): Unit = {
-    assert(freq >= 0 && freq <= 255)
-    Board.analogWrite(pin, PinMode.PWM, freq)
+  def off(): Unit = {
+    Board.write(pin, PinMode.OUTPUT, 0)
   }
 }

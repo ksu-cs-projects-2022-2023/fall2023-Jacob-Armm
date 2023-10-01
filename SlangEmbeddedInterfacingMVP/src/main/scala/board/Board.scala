@@ -10,7 +10,11 @@ import utils.FirmataUtil.PinMode
 
   def ready: B = $
 
-  def analogRead(pin: String, mode: PinMode.Type): Z = $
+  def read(pin: String, mode: PinMode.Type): Z = $
 
-  def analogWrite(pin: String, mode: PinMode.Type, value: Z): Unit = $
+  def write(pin: String, mode: PinMode.Type, value: Z): Unit = $
+
+  def pinExist(pin: String): B = $
+
+  def pinModeCheck(pin: String, mode: PinMode.Type): B = $
 }

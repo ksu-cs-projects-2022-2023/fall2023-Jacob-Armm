@@ -38,7 +38,7 @@ object Board_Ext {
     return device.isReady
   }
 
-  def analogRead(pin: String, mode: PinMode.Type): Z = {
+  def read(pin: String, mode: PinMode.Type): Z = {
     // for now just let exception halt the program
     val mappedPin = pinMap(pin.native)
     val p = device.getPin(mappedPin)
@@ -46,10 +46,18 @@ object Board_Ext {
     return Z(p.getValue)
   }
 
-  def analogWrite(pin: String, mode: PinMode.Type, value: Z): Unit = {
+  def write(pin: String, mode: PinMode.Type, value: Z): Unit = {
     // for now just let exception halt the program
     val p = device.getPin(pinMap(pin.native))
     p.setMode(Pin.Mode.valueOf(mode.name.native))
     p.setValue(value.toInt)
+  }
+
+  def pinExist(pin: String): B = {
+    return !pinMap.contains(pin.native)
+  }
+
+  def pinModeCheck(pin: String, mode: PinMode.Type): B = {
+    return T
   }
 }
