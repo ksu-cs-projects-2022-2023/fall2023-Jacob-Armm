@@ -18,6 +18,11 @@ object Board_Ext {
     "Button" -> 2
   )
 
+//  val pinMap: scala.collection.Map[java.lang.String, Int] = scala.collection.Map(
+//    "PotPin" -> 14,
+//    "ServoPin" -> 9
+//  )
+
   def init(port: String): Unit = {
     this.synchronized {
       try {
@@ -54,7 +59,7 @@ object Board_Ext {
   }
 
   def pinExist(pin: String): B = {
-    return !pinMap.contains(pin.native)
+    return pinMap.contains(pin.native)
   }
 
   def pinModeCheck(pin: String, mode: PinMode.Type): B = {
