@@ -1,0 +1,5 @@
+package devices
+
+class Potentiometer {
+
+}
