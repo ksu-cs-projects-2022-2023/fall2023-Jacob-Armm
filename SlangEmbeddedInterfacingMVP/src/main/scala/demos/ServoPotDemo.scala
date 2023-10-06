@@ -2,17 +2,22 @@
 package demos
 
 import org.sireum._
-import board.Board
+import board.LPConn
 import devices._
+import utils.FirmataUtil.PinMode
 
 object ServoPotDemo extends App {
 
   def main(args: ISZ[String]): Z = {
-    Board.init("COM4")
-    val pot = Potentiometer.createDevice("PotPin")
-    val servo = Servo.createDevice("ServoPin")
 
-    if(Board.ready) {
+    val pin1 = Pin("potPin", PinMode.ANALOG)
+    val pin2 = Pin("servoPin", PinMode.SERVO)
+
+    LPConn.init("/dev/ttyACM0")
+    val pot = Potentiometer.createDevice(pin1)
+    val servo = Servo.createDevice(pin2)
+
+    if(LPConn.ready) {
       while(T) {
         servo.setServoPos(map(pot.getPotValue, 0, 1023, 0, 180))
       }

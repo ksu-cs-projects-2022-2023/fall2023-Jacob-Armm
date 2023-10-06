@@ -2,18 +2,25 @@
 package demos
 
 import org.sireum._
-import board.Board
+import board.LPConn
 import devices._
+import utils.FirmataUtil.PinMode
 
 object LEDPWMDemo extends App {
   def main(args: ISZ[String]): Z = {
-    Board.init("COM3")
-    val rLED = LEDPWM.createDevice("RedLed")
-    val gLED = LEDPWM.createDevice("GreenLed")
-    val bLED = LEDPWM.createDevice("BlueLed")
-    val button = Button.createDevice("Button")
+    val pin1 = Pin("RedLed", PinMode.PWM)
+    val pin2 = Pin("GreenLed", PinMode.PWM)
+    val pin3 = Pin("BlueLed", PinMode.PWM)
+    val pin4 = Pin("Button", PinMode.INPUT)
 
-    if(Board.ready) {
+    LPConn.init("/dev/ttyACM0")
+
+    val rLED = LEDPWM.createDevice(pin1)
+    val gLED = LEDPWM.createDevice(pin2)
+    val bLED = LEDPWM.createDevice(pin3)
+    val button = Button.createDevice(pin4)
+
+    if(LPConn.ready) {
 
       var buttonState = 0
       while(T) {

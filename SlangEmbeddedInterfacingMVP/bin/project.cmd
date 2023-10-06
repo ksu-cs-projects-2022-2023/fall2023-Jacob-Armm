@@ -55,17 +55,17 @@ import org.sireum.project.{Module, Project, Target}
 val home: Os.Path = Os.slashDir.up.canon
 
 val slangModule: Module = Module(
-  id = "BuildingControlDemo_i_Instance",
+  id = "SlangEmbeddedSystemInterfacing",
   basePath = (home / "src").string,
   subPathOpt = None(),
   deps = ISZ(),
   targets = ISZ(Target.Jvm),
   ivyDeps = ISZ("org.sireum.kekinian::library:",
+    // add the following four dependencies
     "com.github.kurbatov:firmata4j:",
-    // uncomment the following two if on Windows or Apple Silicon
+    "com.fazecast:jSerialComm:",
     "io.github.java-native:jssc:",
-    "com.github.kurbatov:firmata4j:"
-),
+    "org.slf4j:slf4j-api:"),
   sources = for(m <- ISZ("scala")) yield (Os.path("main") / m).string,
   resources = ISZ(),
   testSources = for (m <- ISZ("scala")) yield (Os.path("test") / m).string,

@@ -2,20 +2,17 @@
 package devices
 
 import org.sireum._
-import board.Board
+import board.LPConn
 import utils.FirmataUtil.PinMode
 
-@record class LEDPWM(pin: String) {
+@record class LEDPWM(pin: Pin) {
   def setValue(v: Z): Unit = {
-    Board.write(pin, PinMode.PWM, v)
+    pin.write(v)
   }
 }
 
 object LEDPWM {
-  def createDevice(pin: String): LEDPWM = {
-    assert(Board.pinExist(pin), s"Pin Alias $pin does not exist")
-    assert(Board.pinModeCheck(pin, PinMode.OUTPUT), s"Invalid pin mode")
-
+  def createDevice(pin: Pin): LEDPWM = {
     return LEDPWM(pin)
   }
 }

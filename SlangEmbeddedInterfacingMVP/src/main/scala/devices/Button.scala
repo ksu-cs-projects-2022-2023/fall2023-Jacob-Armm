@@ -2,20 +2,18 @@
 package devices
 
 import org.sireum._
-import board.Board
+import board.LPConn
 import utils.FirmataUtil._
 import org.sireum.B
 
-@record class Button(pin: String) {
+@record class Button(pin: Pin) {
   def isPressed: B = {
-    return Board.read(pin, PinMode.INPUT) == 1
+    return pin.read == 1
   }
 }
 
 object Button {
-  def createDevice(pin: String): Button = {
-    assert(Board.pinExist(pin), s"Pin Alias $pin does not exist")
-    assert(Board.pinModeCheck(pin, PinMode.INPUT), s"Invalid pin mode")
+  def createDevice(pin: Pin): Button = {
     return Button(pin)
   }
 }
