@@ -3,7 +3,7 @@ package devices
 
 import org.sireum._
 import board.LPConn
-import utils.FirmataUtil.PinMode
+import utils.PinModeUtil.PinMode
 
 @record class Pin(pinAlias: String, mode: PinMode.Type) {
   def read: Z = {

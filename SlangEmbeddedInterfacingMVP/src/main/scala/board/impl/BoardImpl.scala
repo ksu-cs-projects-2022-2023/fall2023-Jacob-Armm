@@ -1,10 +1,10 @@
 package board.impl
 
 import org.sireum._
-import utils.FirmataUtil.PinMode
+import utils.PinModeUtil.PinMode
 
 trait BoardImpl {
-  def init(port: String): Unit
+  def init(port: Option[String]): Unit
 
   def ready: B
 

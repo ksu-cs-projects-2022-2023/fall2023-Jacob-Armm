@@ -4,7 +4,7 @@ package demos
 import org.sireum._
 import board.LPConn
 import devices._
-import utils.FirmataUtil.PinMode
+import utils.PinModeUtil.PinMode
 
 object ServoPotDemo extends App {
 
@@ -13,7 +13,7 @@ object ServoPotDemo extends App {
     val pin1 = Pin("potPin", PinMode.ANALOG)
     val pin2 = Pin("servoPin", PinMode.SERVO)
 
-    LPConn.init("/dev/ttyACM0")
+    LPConn.init(None())
     val pot = Potentiometer.createDevice(pin1)
     val servo = Servo.createDevice(pin2)
 

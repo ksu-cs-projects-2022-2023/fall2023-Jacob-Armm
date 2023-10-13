@@ -3,7 +3,7 @@ package devices
 
 import org.sireum._
 import board.LPConn
-import utils.FirmataUtil._
+import utils.PinModeUtil._
 
 @record class Servo(pin: Pin) {
   def setServoPos(pos: Z): Unit = {

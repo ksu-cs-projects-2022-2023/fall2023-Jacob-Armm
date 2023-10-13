@@ -3,7 +3,7 @@ package devices
 
 import org.sireum._
 import board.LPConn
-import utils.FirmataUtil._
+import utils.PinModeUtil._
 import org.sireum.B
 
 @record class Button(pin: Pin) {

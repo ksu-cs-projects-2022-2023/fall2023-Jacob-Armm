@@ -3,7 +3,7 @@ package devices
 
 import org.sireum._
 import board.LPConn
-import utils.FirmataUtil.PinMode
+import utils.PinModeUtil.PinMode
 
 @record class LED(pin: Pin) {
   def on(): Unit = {
