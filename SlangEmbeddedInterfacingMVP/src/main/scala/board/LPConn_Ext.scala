@@ -9,16 +9,35 @@ import utils.PinModeUtil.PinMode
 
 import java.util.concurrent.TimeUnit
 object LPConn_Ext {
-  val pinMap: Map[String, Z] = Map.empty ++ ISZ(
-    string"RedLed" ~> z"13",
-    string"GreenLed" ~> z"12",
-    string"BlueLed" ~> z"11",
-    string"Button" ~> z"2"
-  )
 
+  // DO NOT UNCOMMENT
+//  val pinMap: Map[String, Z] = Map.empty ++ ISZ(
+//    string"RedLed" ~> z"13",
+//    string"GreenLed" ~> z"12",
+//    string"BlueLed" ~> z"11",
+//    string"Button" ~> z"2"
+//  )
+  // DO NOT UNCOMMENT
 //  val pinMap: Map[String, Z] = Map.empty ++ ISZ(
 //    string"potPin" ~> z"14",
 //    string"servoPin" ~> z"9"
+//  )
+
+
+  // Assignment 1
+  val pinMap: Map[String, Z] = Map.empty ++ ISZ(
+    string"BoardLed" ~> z"13"
+  )
+
+  //Assignment 2
+//  val pinMap: Map[String, Z] = Map.empty ++ ISZ(
+//    string"RedLed" ~> z"13",
+//    string"Button" ~> z"2"
+//  )
+
+  //Assignment 3
+//  val pinMap: Map[String, Z] = Map.empty ++ ISZ(
+//    //Do It Yourself
 //  )
 
 
