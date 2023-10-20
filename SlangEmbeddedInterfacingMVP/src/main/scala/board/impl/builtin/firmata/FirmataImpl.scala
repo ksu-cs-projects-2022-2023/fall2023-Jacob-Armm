@@ -61,6 +61,20 @@ case class FirmataImpl(pinMap: Map[String, Z]) extends BoardImpl {
     p.setValue(value.toInt)
   }
 
+  override def retievePinList: Map[Z, ISZ[PinMode.Type]] = {
+    val x = device.getPins
+    var pinModeMap: ISZ[(Z, ISZ[PinMode.Type])] = ISZ()
+
+    def pinSetToISZ(set: java.util.Set[Pin.Mode]): ISZ[PinMode.Type] = {
+      var supportedModes: ISZ[PinMode.Type] = ISZ()
+      set.forEach(mode => supportedModes = supportedModes :+ PinMode.byName(mode.name()).get)
+      return supportedModes
+    }
+
+    x.forEach(pin => pinModeMap = pinModeMap :+ (Z(pin.getIndex.toInt), pinSetToISZ(pin.getSupportedModes)))
+    return Map.empty ++ pinModeMap
+  }
+
   private def requestPort: String = {
     val portNameSelector = new JComboBox[String]()
     portNameSelector.setModel(new DefaultComboBoxModel[String]())

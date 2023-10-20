@@ -10,5 +10,12 @@ object PinModeUtil {
     "ANALOG" // Analog pin in analog input mode
     "PWM" // Digital pin in PWM output mode
     "SERVO"
+    "SHIFT"
+    "I2C"
+    "ONEWIRE"
+    "STEPPER"
+    "ENCODER"
+    "SERIAL"
+    "PULLUP"
   }
 }

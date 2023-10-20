@@ -11,7 +11,7 @@ object  WaitDemo extends App {
 
     val pin1 = Pin("RedLed", PinMode.OUTPUT)
 
-    LPConn.init(None())
+//    LPConn.init(None())
     val redLED = LED.createDevice(pin1)
 
     if(LPConn.ready) {

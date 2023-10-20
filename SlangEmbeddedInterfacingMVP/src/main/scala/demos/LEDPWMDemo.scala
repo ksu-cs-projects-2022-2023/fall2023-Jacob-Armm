@@ -13,7 +13,7 @@ object LEDPWMDemo extends App {
     val pin3 = Pin("BlueLed", PinMode.PWM)
     val pin4 = Pin("Button", PinMode.INPUT)
 
-    LPConn.init(None())
+//    LPConn.init(None())
 
     val rLED = LEDPWM.createDevice(pin1)
     val gLED = LEDPWM.createDevice(pin2)

@@ -3,10 +3,11 @@ package board
 
 import org.sireum._
 import utils.PinModeUtil.PinMode
+import devices.Pin
 
 @ext object LPConn {
 
-  def init(port: Option[String]): Unit = $
+  def init(port: Option[String], numRequiredPins: Z, logicalPins: ISZ[Pin]): Unit = $
 
   def ready: B = $
 

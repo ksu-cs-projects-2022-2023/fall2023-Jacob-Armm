@@ -18,7 +18,7 @@ object ButtonWaitDemo extends App {
     val button: Button = Button(pin2)
 
 
-    LPConn.init(None())
+    //LPConn.init(None())
 
     var buttonState: B = F
     var redLedVal: Z = 0

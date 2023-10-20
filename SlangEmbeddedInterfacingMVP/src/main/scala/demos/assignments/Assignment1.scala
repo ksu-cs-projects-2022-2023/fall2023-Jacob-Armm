@@ -9,7 +9,7 @@ import utils.PinModeUtil._
 object Assignment1 extends App {
   override def main(args: ISZ[String]): Z = {
     val boardPin: Pin = Pin("BoardLed", PinMode.OUTPUT)
-    LPConn.init(None())
+    //LPConn.init(None())
     val boardLed: LED = LED.createDevice(boardPin)
 
     while(true) {

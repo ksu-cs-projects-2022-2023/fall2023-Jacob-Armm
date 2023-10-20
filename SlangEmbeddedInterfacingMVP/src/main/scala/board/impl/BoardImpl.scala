@@ -3,8 +3,11 @@ package board.impl
 import org.sireum._
 import utils.PinModeUtil.PinMode
 
+
 trait BoardImpl {
   def init(port: Option[String]): Unit
+
+  def retievePinList: Map[Z, ISZ[PinMode.Type]]
 
   def ready: B
 
