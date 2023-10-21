@@ -1,7 +1,5 @@
 package board
 
-import org.firmata4j._
-import org.firmata4j.firmata._
 import board.impl.BoardImpl
 import board.impl.builtin.firmata._
 import devices.Pin

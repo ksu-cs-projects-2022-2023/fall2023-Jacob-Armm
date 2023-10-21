@@ -7,7 +7,7 @@ import devices.Pin
 
 @ext object LPConn {
 
-  def init(port: Option[String], numRequiredPins: Z, logicalPins: ISZ[Pin]): Unit = $
+  def init(port: Option[String], logicalPins: ISZ[Pin]): Unit = $
 
   def ready: B = $
 
