@@ -1,10 +1,11 @@
-package board.impl
+// #Sireum
+package architecture.impl
 
 import org.sireum._
 import utils.PinModeUtil.PinMode
 
 
-trait BoardImpl {
+@msig trait ArchImpl {
   def init(port: Option[String]): Unit
 
   def retievePinList: Map[Z, ISZ[PinMode.Type]]

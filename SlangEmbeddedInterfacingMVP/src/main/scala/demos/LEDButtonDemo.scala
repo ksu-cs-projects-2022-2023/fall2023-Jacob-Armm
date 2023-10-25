@@ -2,7 +2,7 @@
 package demos
 
 import org.sireum._
-import board.LPConn
+import architecture.LPConn
 import devices._
 import utils.PinModeUtil.PinMode
 
@@ -14,7 +14,7 @@ object  LEDButtonDemo extends App {
     val pin3 = Pin("BlueLed", PinMode.OUTPUT)
     val pin4 = Pin("Button", PinMode.INPUT)
 
-    LPConn.init(None(), ISZ(pin1, pin2, pin3, pin4))
+//    LPConn.init(None(), ISZ(pin1, pin2, pin3, pin4))
     val redLED = LED.createDevice(pin1)
     val greenLED = LED.createDevice(pin2)
     val blueLED = LED.createDevice(pin3)

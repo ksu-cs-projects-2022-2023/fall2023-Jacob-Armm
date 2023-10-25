@@ -2,7 +2,7 @@
 package demos
 
 import org.sireum._
-import board.LPConn
+import architecture.LPConn
 import devices._
 import utils.PinModeUtil._
 

@@ -1,5 +1,5 @@
 // #Sireum
-package board
+package architecture
 
 import org.sireum._
 import utils.PinModeUtil.PinMode
@@ -7,7 +7,7 @@ import devices.Pin
 
 @ext object LPConn {
 
-  def init(port: Option[String], logicalPins: ISZ[Pin]): Unit = $
+  def init(conf: Config, logicalPins: ISZ[Pin]): Unit = $
 
   def ready: B = $
 

@@ -1,21 +1,23 @@
-package board.impl.builtin.firmata
+package architecture.impl.builtin.firmata
 
 import org.sireum._
-import board.impl.BoardImpl
+import architecture.impl.ArchImpl
 import org.firmata4j.firmata.FirmataDevice
 import org.firmata4j.{IODevice, Pin}
 import utils.PinModeUtil.PinMode
 import jssc.{SerialNativeInterface, SerialPortList}
+import org.sireum.$internal.MutableMarker
+
 import java.awt.GridBagLayout
 import java.util.regex.Pattern
 import javax.swing._
 
-case class FirmataImpl(pinMap: Map[String, Z]) extends BoardImpl {
-  var port: String = _
+case class FirmataImpl(pinMap: Map[String, Z]) extends ArchImpl {
   var device: IODevice = _
-  var initRun: B = F
 
   override def init(p: Option[String]): Unit = {
+    var initRun: B = F
+    var port: String = ""
 
     port = p match {
       case Some(s) => s
@@ -107,4 +109,16 @@ case class FirmataImpl(pinMap: Map[String, Z]) extends BoardImpl {
       halt("")
     }
   }
+
+  override def $clonable: Boolean = false
+
+  override def $clonable_=(b: Boolean): MutableMarker = this
+
+  override def $owned: Boolean = false
+
+  override def $owned_=(b: Boolean): MutableMarker = this
+
+  override def $clone: MutableMarker = this
+
+  override def string: String = this.toString
 }

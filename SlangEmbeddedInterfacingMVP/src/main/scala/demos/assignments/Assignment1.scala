@@ -2,7 +2,7 @@
 package demos.assignments
 
 import org.sireum._
-import board.LPConn
+import architecture.LPConn
 import devices.{LED, Pin}
 import utils.PinModeUtil._
 

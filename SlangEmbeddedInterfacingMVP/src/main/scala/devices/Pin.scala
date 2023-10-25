@@ -2,10 +2,10 @@
 package devices
 
 import org.sireum._
-import board.LPConn
+import architecture.LPConn
 import utils.PinModeUtil.PinMode
 
-@record class Pin(pinAlias: String, mode: PinMode.Type) {
+@datatype class Pin(pinAlias: String, mode: PinMode.Type) {
   def read: Z = {
     return LPConn.read(pinAlias, mode)
   }

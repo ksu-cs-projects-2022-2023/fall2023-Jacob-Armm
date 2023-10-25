@@ -1,8 +1,10 @@
 // #Sireum
 package demos
 
+
 import org.sireum._
-import board.LPConn
+import architecture.impl.ArchImpl
+import architecture.{Config, LPConn}
 import devices._
 import utils.PinModeUtil.PinMode
 
@@ -13,7 +15,14 @@ object ServoPotDemo extends App {
     val pin1 = Pin("potPin", PinMode.ANALOG)
     val pin2 = Pin("servoPin", PinMode.SERVO)
 
-//    LPConn.init(None())
+    val pinMap: Map[String, Z] = Map.empty[String, Z] ++ ISZ(
+      "potPin" ~> 14,
+      "servoPin" ~> 9
+    )
+
+    val config = Config(pinMap, implGetter.getImpl(pinMap), None())
+
+    LPConn.init(config, ISZ(pin1, pin2))
     val pot = Potentiometer.createDevice(pin1)
     val servo = Servo.createDevice(pin2)
 
@@ -31,4 +40,8 @@ object ServoPotDemo extends App {
   def map(x: Z, in_min: Z, in_max: Z, out_min: Z, out_max: Z): Z = {
     return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min
   }
+}
+
+@ext object implGetter {
+  def getImpl(pinMap: Map[String, Z]): ArchImpl = $
 }

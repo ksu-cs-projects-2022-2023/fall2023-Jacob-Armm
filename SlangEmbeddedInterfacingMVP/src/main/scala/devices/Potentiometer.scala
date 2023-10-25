@@ -2,15 +2,12 @@
 package devices
 
 import org.sireum._
-import board.LPConn
+import architecture.LPConn
 import utils.PinModeUtil._
 
 
 @record class Potentiometer(pin: Pin) {
   def getPotValue: Z = {
-    def map(x: Z, in_min: Z, in_max: Z, out_min: Z, out_max: Z): Z = {
-      return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min
-    }
 
     var accum: Z = 0
     val numReads: Z = 100
