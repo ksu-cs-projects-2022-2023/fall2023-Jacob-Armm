@@ -3,7 +3,7 @@ package demos.assignments
 
 import org.sireum._
 
-object Assignment2 extends App {
+object Assignment1b extends App {
   override def main(args: ISZ[String]): Z = {
     // TODO: Define a pin for a button with alias "Button"
     // TODO: Define a pin for a LED with alias "RedLed"

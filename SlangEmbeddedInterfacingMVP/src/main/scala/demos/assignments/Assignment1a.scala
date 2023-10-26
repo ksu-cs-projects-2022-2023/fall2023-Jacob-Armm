@@ -6,7 +6,7 @@ import architecture.LPConn
 import devices.{LED, Pin}
 import utils.PinModeUtil._
 
-object Assignment1 extends App {
+object Assignment1a extends App {
   override def main(args: ISZ[String]): Z = {
     val boardPin: Pin = Pin("BoardLed", PinMode.OUTPUT)
     //LPConn.init(None())
