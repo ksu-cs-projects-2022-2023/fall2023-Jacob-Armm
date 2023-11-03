@@ -21,6 +21,7 @@ import utils.PinModeUtil._
 
 object Potentiometer{
   def createDevice(pin: Pin): Potentiometer = {
+    assert(pin.mode == PinMode.ANALOG, "Invalid pinMode for LED")
     return Potentiometer(pin)
   }
 }

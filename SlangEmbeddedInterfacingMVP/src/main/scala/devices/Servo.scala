@@ -13,6 +13,7 @@ import utils.PinModeUtil._
 
 object Servo{
   def createDevice(pin: Pin): Servo = {
+    assert(pin.mode == PinMode.PWM, "Invalid pinMode for LED")
     return Servo(pin)
   }
 }

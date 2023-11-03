@@ -14,6 +14,7 @@ import org.sireum.B
 
 object Button {
   def createDevice(pin: Pin): Button = {
+    assert(pin.mode == PinMode.INPUT, "Invalid pinMode for Button")
     return Button(pin)
   }
 }
