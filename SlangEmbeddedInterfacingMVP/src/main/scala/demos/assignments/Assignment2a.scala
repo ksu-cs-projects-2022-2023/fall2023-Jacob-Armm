@@ -41,7 +41,7 @@ object Assignment2a extends App {
   }
 }
 
-// 3) Define an extension to the firmata implementation 
+// 3) Define an extension to the firmata implementation
     /* Example:
 
         @ext object implGetter {
