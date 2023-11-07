@@ -1,11 +1,7 @@
 //#Sireum
-package demos.assignments
+package demos.assignments.Assignment2b
 
 import org.sireum._
-import devices._
-import utils.PinModeUtil.PinMode
-import architecture.{Config, LPConn}
-import architecture.impl.ArchImpl
 
 object Assignment2b extends App {
 

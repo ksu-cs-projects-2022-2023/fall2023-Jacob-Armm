@@ -1,5 +1,5 @@
 // #Sireum
-package demos
+package demos.LEDPWM
 
 import org.sireum._
 import architecture.LPConn

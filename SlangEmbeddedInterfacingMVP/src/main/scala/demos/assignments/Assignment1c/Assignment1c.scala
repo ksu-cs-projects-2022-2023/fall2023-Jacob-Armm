@@ -1,5 +1,5 @@
 // #Sireum
-package demos.assignments
+package demos.assignments.Assignment1c
 
 import org.sireum._
 

@@ -1,12 +1,7 @@
 //#Sireum
-package demos.assignments
+package demos.assignments.Assignment2a
 
 import org.sireum._
-import devices._
-import utils.PinModeUtil._
-import architecture.{Config, LPConn}
-import architecture.impl.ArchImpl
-import architecture.impl.builtin.firmata._
 
 object Assignment2a extends App {
   def main(args: ISZ[String]): Z = {

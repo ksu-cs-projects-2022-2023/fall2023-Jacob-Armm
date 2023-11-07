@@ -1,9 +1,8 @@
 // #Sireum
-package demos.assignments
+package demos.assignments.Assignment1a
 
-import org.sireum._
-import architecture.LPConn
 import devices.{LED, Pin}
+import org.sireum._
 import utils.PinModeUtil._
 
 object Assignment1a extends App {

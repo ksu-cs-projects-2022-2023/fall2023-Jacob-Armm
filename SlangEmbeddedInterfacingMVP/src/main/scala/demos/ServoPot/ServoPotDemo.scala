@@ -1,11 +1,10 @@
 // #Sireum
-package demos
+package demos.ServoPot
 
-
-import org.sireum._
 import architecture.impl.ArchImpl
 import architecture.{Config, LPConn}
 import devices._
+import org.sireum._
 import utils.PinModeUtil.PinMode
 
 object ServoPotDemo extends App {

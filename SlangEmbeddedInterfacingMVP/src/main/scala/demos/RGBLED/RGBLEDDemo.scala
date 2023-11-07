@@ -1,10 +1,9 @@
 // #Sireum
-package demos
+package demos.RGBLED
 
 import org.sireum._
-import architecture.LPConn
-import architecture.impl._
 import architecture._
+import architecture.impl._
 import devices._
 import utils.PinModeUtil.PinMode
 

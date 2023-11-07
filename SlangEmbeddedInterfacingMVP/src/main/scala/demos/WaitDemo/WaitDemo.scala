@@ -1,9 +1,9 @@
 // #Sireum
-package demos
+package demos.WaitDemo
 
-import org.sireum._
 import architecture.LPConn
 import devices._
+import org.sireum._
 import utils.PinModeUtil.PinMode
 
 object  WaitDemo extends App {
