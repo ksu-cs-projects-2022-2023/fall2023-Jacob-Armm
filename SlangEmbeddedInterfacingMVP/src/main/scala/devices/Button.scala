@@ -2,7 +2,7 @@
 package devices
 
 import org.sireum._
-import architecture.LPConn
+import platform.LPConn
 import utils.PinModeUtil._
 import org.sireum.B
 

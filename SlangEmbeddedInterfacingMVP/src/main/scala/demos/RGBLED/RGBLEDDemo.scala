@@ -2,10 +2,11 @@
 package demos.RGBLED
 
 import org.sireum._
-import architecture._
-import architecture.impl._
+import platform._
+import platform.impl._
 import devices._
 import utils.PinModeUtil.PinMode
+import utils.Config
 
 object RGBLEDDemo extends App {
   def main(args: ISZ[String]): Z = {
@@ -67,6 +68,6 @@ object RGBLEDDemo extends App {
   }
 
   @ext object implGetter {
-    def getImpl(pinMap: Map[String, Z]): ArchImpl = $
+    def getImpl(pinMap: Map[String, Z]): PlatformImpl = $
   }
 }

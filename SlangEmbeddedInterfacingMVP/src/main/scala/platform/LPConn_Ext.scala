@@ -1,9 +1,9 @@
-package architecture
+package platform
 
-import architecture.impl.ArchImpl
-import architecture.impl.builtin.firmata._
+import platform.impl.PlatformImpl
 import devices.Pin
 import org.sireum._
+import utils.Config
 import utils.PinModeUtil.PinMode
 
 import java.util.concurrent.TimeUnit
@@ -11,7 +11,7 @@ object LPConn_Ext {
 
   private var pinMap: Map[String, Z] = _
 
-  private var architectureImpl: ArchImpl = _ //FirmataImpl(pinMap)
+  private var architectureImpl: PlatformImpl = _ //FirmataImpl(pinMap)
 
   def init(conf: Config, logicalPins: ISZ[Pin]): Unit = {
     architectureImpl = conf.impl

@@ -2,7 +2,7 @@
 package devices
 
 import org.sireum._
-import architecture.LPConn
+import platform.LPConn
 import utils.PinModeUtil.PinMode
 
 @record class LEDPWM(pin: Pin) {

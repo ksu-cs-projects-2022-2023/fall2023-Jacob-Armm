@@ -1,7 +1,7 @@
 // #Sireum
 package demos.WaitDemo
 
-import architecture.LPConn
+import platform.LPConn
 import devices._
 import org.sireum._
 import utils.PinModeUtil.PinMode

@@ -1,9 +1,10 @@
 // #Sireum
-package architecture
+package platform
 
 import org.sireum._
 import utils.PinModeUtil.PinMode
 import devices.Pin
+import utils.Config
 
 @ext object LPConn {
 

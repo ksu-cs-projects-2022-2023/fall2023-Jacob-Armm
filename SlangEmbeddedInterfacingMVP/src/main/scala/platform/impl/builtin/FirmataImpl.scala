@@ -1,18 +1,18 @@
-package architecture.impl.builtin.firmata
+package platform.impl.builtin
 
-import org.sireum._
-import architecture.impl.ArchImpl
+import jssc.{SerialNativeInterface, SerialPortList}
 import org.firmata4j.firmata.FirmataDevice
 import org.firmata4j.{IODevice, Pin}
-import utils.PinModeUtil.PinMode
-import jssc.{SerialNativeInterface, SerialPortList}
 import org.sireum.$internal.MutableMarker
+import org.sireum._
+import platform.impl.PlatformImpl
+import utils.PinModeUtil.PinMode
 
 import java.awt.GridBagLayout
 import java.util.regex.Pattern
 import javax.swing._
 
-case class FirmataImpl(pinMap: Map[String, Z]) extends ArchImpl {
+case class FirmataImpl(pinMap: Map[String, Z]) extends PlatformImpl {
   var device: IODevice = _
 
   override def init(p: Option[String]): Unit = {

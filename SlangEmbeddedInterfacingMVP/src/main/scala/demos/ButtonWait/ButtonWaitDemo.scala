@@ -2,7 +2,7 @@
 package demos.ButtonWait
 
 import org.sireum._
-import architecture.LPConn
+import platform.LPConn
 import devices._
 import utils.PinModeUtil._
 

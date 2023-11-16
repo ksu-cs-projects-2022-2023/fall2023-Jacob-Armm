@@ -1,11 +1,11 @@
 package demos.ServoPot
 
-import architecture.impl.ArchImpl
-import architecture.impl.builtin.firmata.FirmataImpl
+import platform.impl.PlatformImpl
 import org.sireum._
+import platform.impl.builtin.FirmataImpl
 
 object implGetter_Ext {
-  def getImpl(pinMap: org.sireum.Map[String, Z]): ArchImpl = {
+  def getImpl(pinMap: org.sireum.Map[String, Z]): PlatformImpl = {
     return FirmataImpl(pinMap)
   }
 }

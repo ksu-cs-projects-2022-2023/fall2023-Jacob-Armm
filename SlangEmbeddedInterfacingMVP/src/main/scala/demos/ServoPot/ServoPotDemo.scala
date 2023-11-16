@@ -1,10 +1,11 @@
 // #Sireum
 package demos.ServoPot
 
-import architecture.impl.ArchImpl
-import architecture.{Config, LPConn}
+import platform.impl.PlatformImpl
+import platform.LPConn
 import devices._
 import org.sireum._
+import utils.Config
 import utils.PinModeUtil.PinMode
 
 object ServoPotDemo extends App {
@@ -42,5 +43,5 @@ object ServoPotDemo extends App {
 }
 
 @ext object implGetter {
-  def getImpl(pinMap: Map[String, Z]): ArchImpl = $
+  def getImpl(pinMap: Map[String, Z]): PlatformImpl = $
 }

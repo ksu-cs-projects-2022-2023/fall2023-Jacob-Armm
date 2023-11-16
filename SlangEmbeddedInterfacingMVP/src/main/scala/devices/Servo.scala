@@ -2,7 +2,7 @@
 package devices
 
 import org.sireum._
-import architecture.LPConn
+import platform.LPConn
 import utils.PinModeUtil._
 
 @record class Servo(pin: Pin) {
