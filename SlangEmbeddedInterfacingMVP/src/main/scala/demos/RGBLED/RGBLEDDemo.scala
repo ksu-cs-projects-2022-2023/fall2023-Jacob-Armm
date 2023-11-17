@@ -6,7 +6,7 @@ import platform._
 import platform.impl._
 import devices._
 import utils.PinModeUtil.PinMode
-import utils.Config
+import utils.{Config, Wait}
 
 object RGBLEDDemo extends App {
   def main(args: ISZ[String]): Z = {
@@ -58,8 +58,8 @@ object RGBLEDDemo extends App {
           blueIncreasing = blue == 0
         }
 
-        LPConn.holdWait(5)
         rgb.setColor(red, green, blue)
+        Wait.waitInMS(5)
 
       }
     }

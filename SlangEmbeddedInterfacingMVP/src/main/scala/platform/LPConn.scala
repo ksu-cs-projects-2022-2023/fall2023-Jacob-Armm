@@ -15,6 +15,4 @@ import utils.Config
   def read(pin: String, mode: PinMode.Type): Z = $
 
   def write(pin: String, mode: PinMode.Type, value: Z): Unit = $
-
-  def holdWait(ms: Z): Unit = $
 }

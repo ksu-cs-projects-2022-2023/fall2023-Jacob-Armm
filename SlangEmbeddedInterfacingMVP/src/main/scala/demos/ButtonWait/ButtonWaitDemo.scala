@@ -5,6 +5,7 @@ import org.sireum._
 import platform.LPConn
 import devices._
 import utils.PinModeUtil._
+import utils.Wait
 
 object ButtonWaitDemo extends App {
   override def main(args: ISZ[String]): Z = {
@@ -58,7 +59,7 @@ object ButtonWaitDemo extends App {
             blueIncreasing = blueLedVal == 0
           }
 
-          LPConn.holdWait(5)
+          Wait.waitInMS(5)
           redLed.setValue(redLedVal)
           greenLed.setValue(greenLedVal)
           blueLed.setValue(blueLedVal)

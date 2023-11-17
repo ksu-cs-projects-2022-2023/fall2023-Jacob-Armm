@@ -6,12 +6,11 @@ import org.sireum._
 import utils.Config
 import utils.PinModeUtil.PinMode
 
-import java.util.concurrent.TimeUnit
 object LPConn_Ext {
 
   private var pinMap: Map[String, Z] = _
 
-  private var architectureImpl: PlatformImpl = _ //FirmataImpl(pinMap)
+  private var architectureImpl: PlatformImpl = _
 
   def init(conf: Config, logicalPins: ISZ[Pin]): Unit = {
     architectureImpl = conf.impl
@@ -51,7 +50,4 @@ object LPConn_Ext {
     architectureImpl.write(pin, mode, value)
   }
 
-  def holdWait(ms: Z): Unit = {
-    TimeUnit.MILLISECONDS.sleep(ms.toLong)
-  }
 }

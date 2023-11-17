@@ -4,6 +4,9 @@ package demos.LEDButton
 import org.sireum._
 import platform.LPConn
 import devices._
+import metaconfig.Conf
+import platform.impl.PlatformImpl
+import utils.Config
 import utils.PinModeUtil.PinMode
 
 object  LEDButtonDemo extends App {
@@ -14,7 +17,16 @@ object  LEDButtonDemo extends App {
     val pin3 = Pin("BlueLed", PinMode.OUTPUT)
     val pin4 = Pin("Button", PinMode.INPUT)
 
-//    LPConn.init(None(), ISZ(pin1, pin2, pin3, pin4))
+    val pinMap = Map.empty ++ ISZ(
+      pin1.pinAlias ~> 13,
+      pin2.pinAlias ~> 12,
+      pin3.pinAlias ~> 11,
+      pin4.pinAlias ~> 2
+    )
+
+    val conf: Config = Config(pinMap, implGetter.getImpl(pinMap), None())
+
+    LPConn.init(conf, ISZ(pin1, pin2, pin3, pin4))
     val redLED = LED.createDevice(pin1)
     val greenLED = LED.createDevice(pin2)
     val blueLED = LED.createDevice(pin3)
@@ -55,5 +67,9 @@ object  LEDButtonDemo extends App {
       }
     }
     return 0
+  }
+
+  @ext object implGetter {
+    def getImpl(pinMap: Map[String, Z]): PlatformImpl = $
   }
 }
