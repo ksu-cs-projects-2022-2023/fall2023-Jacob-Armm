@@ -4,8 +4,9 @@ package demos.ButtonWait
 import org.sireum._
 import platform.LPConn
 import devices._
+import platform.impl.PlatformImpl
 import utils.PinModeUtil._
-import utils.Wait
+import utils.{Config, Wait}
 
 object ButtonWaitDemo extends App {
   override def main(args: ISZ[String]): Z = {
@@ -13,13 +14,23 @@ object ButtonWaitDemo extends App {
     val pin2: Pin = Pin("Button", PinMode.INPUT)
     val pin3: Pin = Pin("GreenLed", PinMode.PWM)
     val pin4: Pin = Pin("BlueLed", PinMode.PWM)
+
+    val pinMap: Map[String, Z] = Map.empty ++ ISZ(
+      pin1.pinAlias ~> 1,
+      pin2.pinAlias ~> 4,
+      pin3.pinAlias ~> 2,
+      pin4.pinAlias ~> 3
+    )
+
+    val conf: Config = Config(pinMap, implGetter.getImpl(pinMap), None())
+
+    LPConn.init(conf, ISZ(pin1, pin2, pin3, pin4))
+
     val redLed: LEDPWM = LEDPWM(pin1)
     val greenLed: LEDPWM = LEDPWM(pin3)
     val blueLed: LEDPWM = LEDPWM(pin4)
     val button: Button = Button(pin2)
 
-
-    //LPConn.init(None())
 
     var buttonState: B = F
     var redLedVal: Z = 0
@@ -72,7 +83,10 @@ object ButtonWaitDemo extends App {
         }
       }
     }
-
     return 0
+  }
+
+  @ext object implGetter {
+    def getImpl(pinMap: Map[String, Z]): PlatformImpl = $
   }
 }

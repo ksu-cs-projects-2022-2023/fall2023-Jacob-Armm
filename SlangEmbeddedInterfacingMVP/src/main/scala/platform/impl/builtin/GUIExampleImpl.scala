@@ -41,8 +41,14 @@ case class GUI() {
     })
 
     l1.setBackground(new Color(255, 0, 0, 50))
+    l1.setOpaque(true)
+    l1.setBorderPainted(false)
     l2.setBackground(new Color(0, 255, 0, 50))
+    l2.setOpaque(true)
+    l2.setBorderPainted(false)
     l3.setBackground(new Color(0, 0, 255, 50))
+    l3.setOpaque(true)
+    l3.setBorderPainted(false)
 
     l1.setPreferredSize(new Dimension(200, 200))
     l1.setFont(l1.getFont.deriveFont(Font.PLAIN, 150f))
@@ -73,10 +79,10 @@ case class GUIExampleImpl(pinMap: Map[String, Z]) extends PlatformImpl {
 
   override def retievePinList: Map[Z, _root_.org.sireum.ISZ[PinMode.Type]] = {
     return Map.empty ++ ISZ(
-      1 ~> ISZ(PinMode.OUTPUT),
-      2 ~> ISZ(PinMode.OUTPUT),
-      3 ~> ISZ(PinMode.OUTPUT),
-      4 ~> ISZ(PinMode.INPUT)
+      1 ~> ISZ(PinMode.OUTPUT, PinMode.PWM),
+      2 ~> ISZ(PinMode.OUTPUT, PinMode.PWM),
+      3 ~> ISZ(PinMode.OUTPUT, PinMode.PWM),
+      4 ~> ISZ(PinMode.INPUT, PinMode.PWM)
     )
   }
 
@@ -105,11 +111,22 @@ case class GUIExampleImpl(pinMap: Map[String, Z]) extends PlatformImpl {
       case _ => halt("Invalid Pin")
     }
 
-    pn match {
-      case z"1" => if(value == z"1") gui.l1.setBackground(new Color(255, 0, 0, 255)) else gui.l1.setBackground(new Color(255, 0, 0, 50))
-      case z"2" => if(value == z"1") gui.l2.setBackground(new Color(0, 255, 0, 255)) else gui.l2.setBackground(new Color(0, 255, 0, 50))
-      case z"3" => if(value == z"1") gui.l3.setBackground(new Color(0, 0, 255, 255)) else gui.l3.setBackground(new Color(0, 0, 255, 50))
-      case _ => halt("Nothing to read on pin")
+    if(mode == PinMode.OUTPUT) {
+      pn match {
+        case z"1" => if (value == z"1") gui.l1.setBackground(new Color(255, 0, 0, 255)) else gui.l1.setBackground(new Color(255, 0, 0, 50))
+        case z"2" => if (value == z"1") gui.l2.setBackground(new Color(0, 255, 0, 255)) else gui.l2.setBackground(new Color(0, 255, 0, 50))
+        case z"3" => if (value == z"1") gui.l3.setBackground(new Color(0, 0, 255, 255)) else gui.l3.setBackground(new Color(0, 0, 255, 50))
+        case _ => halt("Nothing to read on pin")
+      }
+    }
+
+    if (mode == PinMode.PWM) {
+      pn match {
+        case z"1" => gui.l1.setBackground(new Color(255, 0, 0, value.toInt))
+        case z"2" => gui.l2.setBackground(new Color(0, 255, 0, value.toInt))
+        case z"3" => gui.l3.setBackground(new Color(0, 0, 255, value.toInt))
+        case _ => halt("Nothing to read on pin")
+      }
     }
 
     gui.f.invalidate()
