@@ -1,0 +1,11 @@
+Red Channel
+1 ~> ISZ(PinMode.OUTPUT, PinMode.PWM)
+
+Green Channel
+2 ~> ISZ(PinMode.OUTPUT, PinMode.PWM)
+
+Blue Channel
+3 ~> ISZ(PinMode.OUTPUT, PinMode.PWM)
+
+SpaceBar
+4 ~> ISZ(PinMode.INPUT, PinMode.PWM)

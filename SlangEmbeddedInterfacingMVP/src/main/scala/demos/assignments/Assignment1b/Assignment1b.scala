@@ -13,7 +13,7 @@ object Assignment1b extends App {
     // TODO: Define Button
     // TODO: Define LED
 
-    // TODO: Write a state machine that turns an led on and off when a button is pressed
+    // TODO: Write a state machine that turns an led on and off when the button is pressed again
 
     return 0
   }
