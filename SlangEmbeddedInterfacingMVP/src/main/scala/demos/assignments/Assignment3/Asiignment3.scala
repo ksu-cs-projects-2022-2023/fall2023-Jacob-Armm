@@ -27,6 +27,6 @@ object Asiignment3 extends App {
   }
 }
 
-@ext object implGetter {
-  def getImpl(pinMap: Map[String, Z]): PlatformImpl = $
-}
+//@ext object implGetter {
+//  def getImpl(pinMap: Map[String, Z]): PlatformImpl = $
+//}
