@@ -2,7 +2,7 @@
 
 1) Download Sireum by following the instructions [here](https://sireum.org/getting-started/)
 2) Open the SlangEmbeddedInterfacingMVP directory in a terminal and type:
-  sireum proyek ive .
+    sireum proyek ive .
 3) Open the project in the SireumIVE
 
 ## How to run an example application
