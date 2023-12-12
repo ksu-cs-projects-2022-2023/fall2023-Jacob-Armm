@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SlangEmbeddedSystemInterfacing.iml" filepath="$PROJECT_DIR$/.idea/modules/SlangEmbeddedSystemInterfacing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SlangEmbeddedInterfacingMVP.iml" filepath="$PROJECT_DIR$/.idea/modules/SlangEmbeddedInterfacingMVP.iml" />
+    </modules>
+  </component>
+</project>

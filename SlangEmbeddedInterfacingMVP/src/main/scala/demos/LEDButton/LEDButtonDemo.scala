@@ -18,10 +18,10 @@ object  LEDButtonDemo extends App {
     val pin4 = Pin("Button", PinMode.INPUT)
 
     val pinMap = Map.empty ++ ISZ(
-      pin1.pinAlias ~> 1,
-      pin2.pinAlias ~> 2,
-      pin3.pinAlias ~> 3,
-      pin4.pinAlias ~> 4
+      pin1.pinAlias ~> 13,
+      pin2.pinAlias ~> 12,
+      pin3.pinAlias ~> 11,
+      pin4.pinAlias ~> 2
     )
 
     val conf: Config = Config(pinMap, implGetter.getImpl(pinMap), None())

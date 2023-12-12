@@ -6,6 +6,6 @@ import platform.impl.builtin.{FirmataImpl, GUIExampleImpl}
 
 object implGetter_Ext {
   def getImpl(pinMap: Map[String, Z]): PlatformImpl = {
-    return GUIExampleImpl(pinMap)
+    return FirmataImpl(pinMap)
   }
 }

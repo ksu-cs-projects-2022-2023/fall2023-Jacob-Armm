@@ -1,0 +1,45 @@
+{
+  "type" : "Project",
+  "modules" : {
+    "type" : "HashSMap",
+    "size" : 1,
+    "entries" : [
+      [
+        "SlangEmbeddedSystemInterfacing",
+        {
+          "type" : "Module",
+          "id" : "SlangEmbeddedSystemInterfacing",
+          "basePath" : "\/Users\/jacoblegg\/Desktop\/fall2023-Jacob-Armm\/SlangEmbeddedInterfacingMVP\/src",
+          "subPathOpt" : {
+            "type" : "None"
+          },
+          "deps" : [],
+          "targets" : [
+            {
+              "type" : "Target",
+              "value" : "Jvm"
+            }
+          ],
+          "ivyDeps" : ["org.sireum.kekinian::library:", "com.github.kurbatov:firmata4j:", "com.fazecast:jSerialComm:", "io.github.java-native:jssc:", "org.slf4j:slf4j-api:", "org.scala-lang.modules::scala-swing:"],
+          "sources" : ["main\/scala"],
+          "resources" : [],
+          "testSources" : ["test\/scala"],
+          "testResources" : [],
+          "publishInfoOpt" : {
+            "type" : "None"
+          }
+        }
+      ]
+    ]
+  },
+  "poset" : {
+    "type" : "Poset",
+    "nodes" : [],
+    "parents" : {
+      "type" : "HashSMap",
+      "size" : 0,
+      "entries" : [  ]
+    }
+  },
+  "mavenRepoUrls" : []
+}
