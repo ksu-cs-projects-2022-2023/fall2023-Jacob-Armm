@@ -1,10 +1,10 @@
 // #Sireum
 package demos.ServoPot
 
+import org.sireum._
 import platform.impl.PlatformImpl
 import platform.LPConn
 import devices._
-import org.sireum._
 import utils.Config
 import utils.PinModeUtil.PinMode
 
